@@ -705,6 +705,18 @@ input[class^=btn-]:hover {
   text-align: center;
   background: #781d42;
 }
+#civileng-software {
+  text-align: center;
+}
+#civileng-software .about-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+}
+#civileng-software .about-logos img {
+  width: 70%;
+}
 #civileng-stats h2 {
   color: #333;
 }
@@ -774,6 +786,7 @@ input[class^=btn-]:hover {
   #portfolio-experience .specials-tech,
 #civileng-experience .specials,
 #civileng-stats .stats,
+#civileng-software .about-logos,
 #portfolio-process .process,
 #about-clients .testimonials,
 #portfolio-software .about-logos,
