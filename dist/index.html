@@ -13,50 +13,116 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Intro to my portfolio</title>
+    <title>Alejandro Lagos || Portfolio</title>
   </head>
-  <body class="bc-main">
-    <div>
-      <section class="bc-main-a">
-        <img
-          src="img/logoal.png"
-          alt="My Portfolio"
-          id="main-logo"
-          class="py-2"
-        />
-        <div class="bc-main-a-welcome">
-          <h1>
-            <span
-              class="txt-type"
-              data-wait="3000"
-              data-words='["Welcome!","欢迎来到!", "Bienvenido!"]'
-            ></span>
-            <br />
-            I'm Alejandro
-          </h1>
-          <p class="media-hide">
-            A colombian structural engineer and programmer
-          </p>
+  <body>
+    <header id="header-main">
+      <nav id="main-nav">
+        <a href="index.html">
+          <img
+            src="img/logoal.png"
+            alt="A personal logo with my initials"
+            id="logo"
+          />
+        </a>
+        <ul>
+          <li><a href="index.html" class="current">Intro</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="portfolio.html">Tech Portfolio</a></li>
+          <li><a href="civileng.html">Civil Engineer</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="header__intro">
+        <div class="header__text">
+          <div class="headingpr--main">
+            <h1>
+              <span
+                class="txt-type"
+                data-wait="3000"
+                data-words='["Welcome!","欢迎来到!", "Bienvenido!"]'
+              ></span>
+              <br />
+              I'm Alejandro
+            </h1>
+          </div>
+          <h3>A colombian structural engineer and programmer</h3>
         </div>
       </section>
-      <section class="bc-main-b">
-        <div class="bc-main-description">
-          <h2>Check out my profile</h2>
-          <p class="media-hide">
-            If you're interested, you can see my web-development & data science
-            portfolio or some of my previous work as a structural engineer
-          </p>
+    </header>
+    <section id="intro-general" class="text-center py-3">
+      <div class="container">
+        <h3 class="section-title">This is a little about me</h3>
+        <div class="intro-info">
+          <img src="img/fondo_tech.jpg" alt="" class="bio-image" />
+          <div class="bio bg-main">
+            <p class="bio-p">
+              I'm a civil engineer by trade and a self-taught web developer.
+              <br />
+              I have extensive experience in structural design and project
+              management. Now I'm reinventing myself into the tech world <br />
+              Currently studying data science and Front-end development.
+            </p>
+          </div>
+          <div class="award-1">
+            <i class="fas fa-user-graduate fa-3x"></i>
+            <h3>Studies</h3>
+            <p>
+              Civil Engineer <br />
+              Project Management Specialist
+            </p>
+          </div>
+          <div class="award-2">
+            <i class="fas fa-hard-hat fa-3x"></i>
+            <h3>Job Experience</h3>
+            <p>
+              Front-end freelancer <br />
+              Data analyst
+            </p>
+          </div>
+          <div class="award-3">
+            <i class="fas fa-user-plus fa-3x"></i>
+            <h3>Dev Skills</h3>
+            <p>Front-end and Data Analysis <br /> (JS Frameworks & Python)</p>
+          </div>
         </div>
-        <div class="bc-main-portfolios py-1">
-          <a href="tech_home.html" target="_blank" class="btn-dark"
-            >Programming</a
-          >
-          <a href="civil_home.html" target="_blank" class="btn-dark"
-            >Civil Engineering</a
-          >
+      </div>
+    </section>
+    <section id="intro-links" class="text-center py-3">
+        <h2>Check out my profile</h2>
+        <p class="media-hide">
+          If you're interested, you can see my tech portfolio or some of my previous work as a structural engineer
+        </p>
+      </div>
+      <div class="py-1">
+        <a href="portfolio.html" target="_blank" class="btn-dark"
+          >Tech Portfolio</a
+        >
+        <a href="civileng.html" target="_blank" class="btn-dark"
+          >Civil Engineering</a
+        >
+    </section>
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content container">
+        <p>A project By: Alejo Lagos</p>
+        <p>Copyright &copy; 2022. All rights reserved</p>
+        <div class="social">
+          <a href="https://co.linkedin.com/in/alejandrolagos1" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/alejolagosm" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://codepen.io/alejolagosm" target="_blank"
+            ><i class="fab fa-codepen"></i
+          ></a>
+          <a href="https://twitter.com/alejolagos12" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
         </div>
-      </section>
-    </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
