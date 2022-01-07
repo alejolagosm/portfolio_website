@@ -106,7 +106,7 @@ body {
 
 .headingsec {
   display: inline-block;
-  font-size: 4rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
   background-image: linear-gradient(to right, #781d42, #333);
@@ -116,14 +116,9 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
 }
-@media only screen and (max-width: 56.25em) {
-  .headingsec {
-    font-size: 3rem;
-  }
-}
 @media only screen and (max-width: 37.5em) {
   .headingsec {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 .headingsec:hover {
@@ -251,6 +246,114 @@ button[class^=btn-]:hover,
 a[class^=btn-]:hover,
 input[class^=btn-]:hover {
   background-color: #781d42;
+}
+
+.card {
+  --height: 25rem;
+  --width: 100%;
+  perspective: 150rem;
+  position: relative;
+  height: var(--height);
+  width: var(--width);
+}
+.card__side {
+  background-color: #ffff;
+  height: var(--height);
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.2);
+  overflow: hidden;
+}
+.card__side--front {
+  background-color: #ffff;
+}
+.card__side--back {
+  transform: rotateY(-180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, rgba(163, 66, 60, 0.3), #a3423c);
+}
+.card__side--back-2 {
+  background-image: linear-gradient(to right bottom, rgba(120, 29, 66, 0.3), #781d42);
+}
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+.card__picture {
+  background: no-repeat 0 50%/cover;
+  background-size: contain;
+  height: 80%;
+  background-blend-mode: multiply;
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.1), transparent), url("img/pj/pj_4.jpg");
+}
+.card__picture--2 {
+  background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.1), transparent), url("img/pj/pj_3.gif");
+}
+.card__picture--3 {
+  background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.1), transparent), url("img/pj/pj_2.jpg");
+}
+.card__heading {
+  height: 20%;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+}
+.card__info {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .card {
+    height: auto;
+    border-radius: 5px;
+    background-color: #ffff;
+    box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.2);
+  }
+  .card__side {
+    height: auto;
+    transition: all 1s ease;
+    position: relative;
+    box-shadow: none;
+  }
+  .card__side--back {
+    transform: rotateY(0);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+  .card__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 2rem;
+  }
 }
 
 #main-nav {
@@ -478,40 +581,50 @@ input[class^=btn-]:hover {
   margin-right: 0.5rem;
 }
 
-#contact-b .text-fields {
+#contact-form .text-fields {
   display: grid;
   grid-template-areas: "name email" "subject phone" "message message";
   grid-gap: 1.2rem;
   margin-bottom: 1.2rem;
 }
-#contact-b .text-fields .name-input {
+#contact-form .text-fields .name-input {
   grid-area: name;
 }
-#contact-b .text-fields .subject-input {
+#contact-form .text-fields .subject-input {
   grid-area: subject;
 }
-#contact-b .text-fields .email-input {
+#contact-form .text-fields .email-input {
   grid-area: email;
 }
-#contact-b .text-fields .phone-input {
+#contact-form .text-fields .phone-input {
   grid-area: phone;
 }
-#contact-b .text-fields .message-input {
+#contact-form .text-fields .message-input {
   grid-area: message;
+  grid-row: 3/span 2;
   height: 100px;
 }
-#contact-b .text-fields .text-input {
+#contact-form .text-fields .text-input {
   padding: 0.5rem 1rem;
 }
-#contact-b button[type=submit] {
+#contact-form button[type=submit] {
   width: 50%;
 }
-#contact-a .contact-info {
+#contact-info {
+  color: #333;
+}
+#contact-info .contact-info_items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
 }
-#contact-c h1 {
+#contact-info .contact-info_items i {
+  color: #781d42;
+}
+#contact-tagline {
+  color: #333;
+}
+#contact-tagline h1 {
   text-align: center;
   font-size: 3rem;
 }
@@ -582,44 +695,32 @@ input[class^=btn-]:hover {
   grid-template-columns: repeat(3, 1fr);
 }
 #portfolio-experience .specials-tech .fas,
-#portfolio-experience .specials-tech .fab {
+#portfolio-experience .specials-tech .fab,
+#portfolio-experience .specials-tech .far {
   color: #781d42;
   padding-bottom: 0.4rem;
+}
+#portfolio-examples .cards-container {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+#portfolio-examples .cards-container .item-1 {
+  width: 80%;
+  margin: 0 1rem;
 }
 #portfolio-software {
   text-align: center;
 }
-#portfolio-software .about-logos {
+#portfolio-software .portfolio-logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
-  align-items: center;
+  place-items: center;
 }
-#portfolio-software .about-logos img {
-  width: 70%;
-}
-#portfolio-stats .stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-#portfolio-stats .stats li {
-  line-height: 2;
-}
-#portfolio-stats .stats li.stats-title {
-  font-size: 1.5rem;
-}
-#portfolio-stats .stats li.stats-number {
-  font-size: 2rem;
-  font-weight: bold;
-}
-#portfolio-stats .stats div {
-  padding-bottom: 3rem 0;
-}
-#portfolio-stats .stats div:nth-child(odd) {
-  background: #ffff;
-}
-#portfolio-stats .stats div:nth-child(even) {
-  background: #781d42;
+#portfolio-software .portfolio-logos_item {
+  color: #781d42;
 }
 #portfolio-process {
   color: #333;
@@ -689,6 +790,10 @@ input[class^=btn-]:hover {
   color: #781d42;
   padding-bottom: 0.4rem;
 }
+#civileng-skills {
+  color: #333;
+  padding: 0 2rem;
+}
 #civileng-skills h2 {
   text-align: center;
 }
@@ -712,10 +817,10 @@ input[class^=btn-]:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
-  align-items: center;
+  place-items: center;
 }
 #civileng-software .about-logos img {
-  width: 70%;
+  width: 50%;
 }
 #civileng-stats h2 {
   color: #333;
