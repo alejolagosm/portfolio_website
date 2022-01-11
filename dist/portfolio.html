@@ -19,15 +19,34 @@
     <!-- Header -->
     <header id="header-inner">
       <nav id="main-nav">
-        <a href="index.html">
-          <img
-            src="img/logoal.png"
-            alt="A personal logo with my initials"
-            id="logo"
-          />
-        </a>
-        <ul>
-          <li><a href="index.html">Intro</a></li>
+        <div class="logo_burger">
+          <a href="index.html">
+            <img
+              src="img/logoal.png"
+              alt="A personal logo with my initials"
+              id="logo"
+            />
+          </a>
+          <div id="burger" class="burger-menu hidden"
+          >
+            <svg
+              class="burger-menu_svg"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <ul id="menu">
+          <li><a href="index.html" >Intro</a></li>
           <li><a href="about.html">About Me</a></li>
           <li><a href="portfolio.html" class="current">Tech Portfolio</a></li>
           <li><a href="civileng.html">Civil Engineer</a></li>
@@ -90,6 +109,7 @@
                 </div>
                 <a href="https://github.com/alejolagosm" target="_blank"class="btn-dark">Go to repo</a>
               </div>
+              
             </div>
           </div>
         </div>

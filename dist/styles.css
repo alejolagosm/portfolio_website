@@ -326,27 +326,24 @@ input[class^=btn-]:hover {
   text-align: center;
   margin-bottom: 2rem;
 }
-@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+@media only screen and (max-width: 500px), only screen and (hover: none) {
   .card {
+    padding: 3rem 0;
     height: auto;
     border-radius: 5px;
-    background-color: #ffff;
-    box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.2);
   }
   .card__side {
-    height: auto;
+    height: 25rem;
     transition: all 1s ease;
     position: relative;
     box-shadow: none;
   }
   .card__side--back {
+    height: 10rem;
     transform: rotateY(0);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   }
-  .card:hover .card__side--front {
-    transform: rotateY(0);
-  }
-  .card__cta {
+  .card__side--back__cta {
     position: relative;
     top: 0;
     left: 0;
@@ -354,8 +351,19 @@ input[class^=btn-]:hover {
     width: 100%;
     padding: 2rem;
   }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
 }
 
+/*
+linear-gradient(
+      0deg,
+      rgba(7, 49, 58, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    )
+
+*/
 .portfolio_2 {
   background-color: #a3423c;
 }
@@ -379,6 +387,7 @@ input[class^=btn-]:hover {
   background: var(--optionBackground);
   background-color: #ffff;
   background-size: auto 100%;
+  background-repeat: no-repeat;
   background-position: center;
   border-radius: 30px;
   cursor: pointer;
@@ -387,7 +396,6 @@ input[class^=btn-]:hover {
 .portfolio_2 .active {
   flex-grow: 10;
   max-width: 600px;
-  margin: 0px;
 }
 .portfolio_2 .active .detail {
   bottom: 20px;
@@ -448,6 +456,13 @@ input[class^=btn-]:hover {
 }
 #main-nav ul {
   display: flex;
+}
+#main-nav .burger-menu_svg {
+  width: 2rem;
+  height: 2rem;
+}
+#main-nav .hidden {
+  display: none;
 }
 #main-nav li {
   padding: 1rem 1.5rem;
@@ -947,15 +962,23 @@ input[class^=btn-]:hover {
 }
 @media (max-width: 500px) {
   #main-nav {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+  }
+  #main-nav .logo_burger {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
   #main-nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+  }
+  #main-nav .burger-menu {
+    display: block;
   }
   #main-nav li {
     padding: 1rem;
+    text-align: center;
   }
 
   #header-main .header__intro {
@@ -967,9 +990,6 @@ input[class^=btn-]:hover {
     font-size: 1rem;
     font-weight: 700;
   }
-  #header-inner {
-    height: 15rem;
-  }
 
   #portfolio-experience .specials-tech,
 #civileng-experience .specials,
@@ -977,10 +997,13 @@ input[class^=btn-]:hover {
 #civileng-software .about-logos,
 #portfolio-process .process,
 #about-clients .testimonials,
-#portfolio-software .about-logos,
-#contact-a .contact-info,
+#contact-info .contact-info_items,
 .items {
     grid-template-columns: 1fr;
+  }
+
+  #portfolio-software .portfolio-logos {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #home-experience .specials div {
@@ -1010,7 +1033,44 @@ input[class^=btn-]:hover {
     display: none;
   }
 
-  #contact-b .text-fields {
+  #portfolio-examples .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #portfolio-examples .cards-container .item-1 {
+    width: 100%;
+  }
+
+  .portfolio_2-cards {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 450px;
+  }
+  .portfolio_2-card {
+    flex: 1;
+    width: 80%;
+    min-height: 60px;
+    background-size: 100% auto;
+    background-position: center;
+  }
+  .portfolio_2-card .detail .info > * {
+    font-size: 0.8rem;
+  }
+  .portfolio_2 > :not(.active) {
+    flex-grow: 1;
+  }
+  .portfolio_2 > :not(.active) .detail {
+    bottom: 2%;
+    left: 20px;
+  }
+  .portfolio_2 > :not(.active) .detail .info > * {
+    left: 20px;
+    opacity: 0;
+  }
+
+  #contact-form .text-fields {
     grid-template-areas: "name" "email" "subject" "phone" "message";
   }
   #contact-a div {

@@ -1,3 +1,16 @@
+// Navigation Media Query hidden
+const burger = document.querySelector("#burger");
+const menu = document.querySelector("#menu");
+
+burger.addEventListener("click", () => {
+  if (menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden");
+  } else {
+    menu.classList.add("hidden");
+  }
+});
+
+// Typewrite class for the typing effect on the intro page
 class TypeWriter {
   constructor(txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
@@ -55,7 +68,7 @@ class TypeWriter {
 // Init On DOM Load
 document.addEventListener("DOMContentLoaded", init);
 
-// Init App
+// Init Typewrite on DOM load
 function init() {
   const txtElement = document.querySelector(".txt-type");
   const words = JSON.parse(txtElement.getAttribute("data-words"));
@@ -64,8 +77,8 @@ function init() {
   new TypeWriter(txtElement, words, wait);
 }
 
+// Portfolio component: Slider cards
 const cards = document.querySelector(".portfolio_2-cards");
-
 cards.addEventListener("click", function (e) {
   Array.from(cards.children).forEach((card) => card.classList.remove("active"));
   e.target.closest(".portfolio_2-card").classList.add("active");
