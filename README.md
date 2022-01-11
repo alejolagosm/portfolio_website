@@ -1,10 +1,10 @@
 # portfolio_website
 This is my portfolio website. 
 
-Always a work in progress. 
+Still a work in progress,I want to add more components to showcase other projects and perfect the responsiveness of the site. 
 
-It's a simple static website with an intro page, a civil engineer and tech portfolio, with about, work and contact pages.
+It has an intro page, a tech portfolio, some of my previous work as a structural engineer and a contact form.
 
-I made it using HTML, SCSS and a little bit of JS for some effects.
+I made it using HTML, SCSS and Vanilla JS for some dinamic effects.
 
 Check out the demo at https://alejolagos.netlify.app/
