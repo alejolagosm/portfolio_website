@@ -289,7 +289,7 @@ input[class^=btn-]:hover {
   transform: rotateY(0);
 }
 .card__picture {
-  background: no-repeat 0 50%/cover;
+  background: no-repeat 50% 50%/cover;
   background-size: contain;
   height: 80%;
   background-blend-mode: multiply;
@@ -354,6 +354,89 @@ input[class^=btn-]:hover {
     width: 100%;
     padding: 2rem;
   }
+}
+
+.portfolio_2 {
+  background-color: #a3423c;
+}
+.portfolio_2-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 2rem;
+  height: 400px;
+  min-width: 600px;
+  max-width: 900px;
+  width: calc(100% - 100px);
+}
+.portfolio_2-card {
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;
+  margin: 10px;
+  background: var(--optionBackground);
+  background-color: #ffff;
+  background-size: auto 100%;
+  background-position: center;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 1s;
+}
+.portfolio_2 .active {
+  flex-grow: 10;
+  max-width: 600px;
+  margin: 0px;
+}
+.portfolio_2 .active .detail {
+  bottom: 20px;
+  left: 20px;
+}
+.portfolio_2 .active .detail .info > div {
+  left: 0px;
+  opacity: 1;
+}
+.portfolio_2 > :not(.active) {
+  flex-grow: 1;
+}
+.portfolio_2 > :not(.active) .detail {
+  bottom: 10px;
+  left: 10px;
+}
+.portfolio_2 > :not(.active) .detail .info > * {
+  left: 20px;
+  opacity: 0;
+}
+.portfolio_2 .detail {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  height: 50px;
+}
+.portfolio_2 .detail .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #781d42;
+}
+.portfolio_2 .detail .info {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  color: #a3423c;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.portfolio_2 .detail .info > * {
+  position: relative;
 }
 
 #main-nav {
