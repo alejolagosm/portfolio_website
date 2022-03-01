@@ -1,0 +1,54 @@
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+  }
+  &-portfolio {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+}
+// The ^ permits to select any color with the btn- in the name
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-image: linear-gradient(
+    to right bottom,
+    #781d42,
+    #812341,
+    #8a2941,
+    #92303f,
+    #9a373e,
+    #a64741,
+    #b05645,
+    #ba6649,
+    #c98156,
+    #d79c66,
+    #e4b779,
+    #f0d290
+  );
+  transform: scale(1.05);
+}

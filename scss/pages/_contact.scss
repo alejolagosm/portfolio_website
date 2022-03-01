@@ -1,0 +1,56 @@
+// Contact page
+#contact {
+  &-form {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      // Grid Areas
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        grid-row: 3 / span 2;
+        height: 100px;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[type="submit"] {
+      width: 50%;
+    }
+  }
+  &-info {
+    color: $dark-color;
+    .contact-info_items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      i {
+        color: $main-color;
+      }
+    }
+  }
+  &-tagline {
+    color: $dark-color;
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+}
