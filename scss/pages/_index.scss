@@ -1,0 +1,158 @@
+// Intro Page
+#intro {
+  &-skills {
+    .specials-tech {
+      color: $dark-color;
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      .fas,
+      .fab,
+      .far {
+        color: $main-color;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+
+  &-stack {
+    // color: #000;
+    .grid {
+      color: #fff;
+      display: grid;
+      grid-template-areas:
+        'heading1 heading1 heading1'
+        'biojs js js '
+        'heading2 heading2 heading2'
+        'python python biopython';
+      grid-gap: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    // Grid Areas
+    .hfront {
+      grid-area: heading1;
+      color: $main-color;
+    }
+    .biojs {
+      grid-area: biojs;
+    }
+    .js {
+      grid-area: js;
+    }
+    .hdata {
+      grid-area: heading2;
+      color: $main-color;
+    }
+    .biopython {
+      grid-area: biopython;
+    }
+    .python {
+      grid-area: python;
+    }
+    .biojs,
+    .biopython {
+      border-radius: 10px;
+      max-width: 100%;
+      padding: 30px;
+      background-image: linear-gradient(
+        to left,
+        #781d42,
+        #812341,
+        #8a2941,
+        #92303f,
+        #9a373e,
+        #a64741,
+        #b05645,
+        #ba6649
+      );
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      img {
+        height: 300px;
+        width: 300px;
+        max-width: 100%;
+      }
+    }
+    .js,
+    .python {
+      padding: 1rem;
+      position: relative;
+      min-height: 300px;
+      svg {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+    }
+  }
+
+  &-process {
+    color: $dark-color;
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+      // process-step class
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main-color;
+        color: set-text-color($main-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+      // process-icon class
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 1s;
+        }
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $dark-color;
+    div {
+      :not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

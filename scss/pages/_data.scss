@@ -1,0 +1,85 @@
+#data {
+  color: $dark-color;
+  // Experience
+  &-experience {
+    .specials {
+      color: $dark-color;
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      .fas,
+      .fab {
+        color: $main-color;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+
+  // Skills
+  &-skills {
+    color: $dark-color;
+    padding: 0 2rem;
+    h2 {
+      text-align: center;
+    }
+
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.3rem;
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: $main-color;
+      }
+    }
+  }
+
+  // Software
+  &-software {
+    text-align: center;
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+      place-items: center;
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  // Stats
+  &-stats {
+    h2 {
+      color: $dark-color;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      li {
+        line-height: 2;
+        &.stats-title {
+          font-size: 1.2rem;
+        }
+        &.stats-number {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+      div {
+        padding-bottom: 3rem 0;
+        &:nth-child(odd) {
+          background: $medium-color;
+        }
+        &:nth-child(even) {
+          background: $main-color;
+        }
+      }
+    }
+  }
+}

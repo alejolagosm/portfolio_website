@@ -40,6 +40,9 @@
 }
 // Smartphones
 @media (max-width: 500px) {
+  iframe {
+    max-width: 100%;
+  }
   #main-nav {
     align-items: center;
     flex-direction: column;
@@ -76,18 +79,22 @@
     }
   }
   // Stack Grid Columns
-  #portfolio-experience .specials-tech,
+  #intro-skills .specials-tech,
   #civileng-experience .specials,
   #civileng-software .about-logos,
-  #portfolio-process .process,
+  #intro-process .process,
   #about-clients .testimonials,
   #contact-info .contact-info_items,
   .items {
     grid-template-columns: 1fr;
   }
   #portfolio-software .portfolio-logos,
-  #civileng-stats .stats {
+  #data-stats .stats {
     grid-template-columns: repeat(2, 1fr);
+    & > * {
+      display: grid;
+      place-content: center;
+    }
   }
   // Home
   #home {
@@ -109,15 +116,14 @@
   }
   // Intro
   #intro {
-    &-general {
-      .intro-info {
-        grid-template-areas:
-          'bio'
-          'bioimage'
-          'aw1'
-          'aw2'
-          'aw3';
-      }
+    &-stack .grid {
+      grid-template-areas:
+        'heading1'
+        'biojs'
+        'js'
+        'heading2'
+        'python'
+        'biopython';
     }
 
     &-current {
