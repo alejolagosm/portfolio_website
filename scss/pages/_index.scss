@@ -40,6 +40,11 @@
     }
     .js {
       grid-area: js;
+      .general {
+        background: url('../../dist/img/icons/react.svg') no-repeat center
+          center;
+        background-size: 80%;
+      }
     }
     .hdata {
       grid-area: heading2;
@@ -50,6 +55,10 @@
     }
     .python {
       grid-area: python;
+      .general {
+        background: url('../../dist/img/icons/python.svg') no-repeat center
+          center;
+      }
     }
     .biojs,
     .biopython {
@@ -76,15 +85,49 @@
     }
     .js,
     .python {
+      $wrap_size: 300px;
+      $item_size: 60px;
+      $num_of_items: 4;
       padding: 1rem;
-      position: relative;
-      min-height: 300px;
-      svg {
-        cursor: pointer;
-        position: absolute;
+      cursor: pointer;
+
+      .general {
+        width: $wrap_size;
+        height: $wrap_size;
+        position: relative;
         top: 50%;
         left: 50%;
         translate: -50% -50%;
+        div {
+          opacity: 0;
+          width: $item_size;
+          height: $item_size;
+          text-align: center;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform-origin: ($wrap_size / 2) ($wrap_size / 2);
+
+          @for $i from 1 through $num_of_items {
+            $deg: 360 / $num_of_items * ($i - 1);
+            $rotation: $deg * 1deg;
+            &:nth-child(#{$i}) {
+              transform: rotateZ($rotation);
+              img {
+                transform: rotateZ(-$rotation);
+              }
+            }
+          }
+        }
+      }
+    }
+    .js:hover,
+    .python:hover {
+      .general {
+        div {
+          opacity: 1;
+        }
       }
     }
   }

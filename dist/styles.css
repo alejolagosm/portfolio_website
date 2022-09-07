@@ -685,6 +685,10 @@ linear-gradient(
 #intro-stack .js {
   grid-area: js;
 }
+#intro-stack .js .general {
+  background: url("../../dist/img/icons/react.svg") no-repeat center center;
+  background-size: 80%;
+}
 #intro-stack .hdata {
   grid-area: heading2;
   color: #781d42;
@@ -694,6 +698,9 @@ linear-gradient(
 }
 #intro-stack .python {
   grid-area: python;
+}
+#intro-stack .python .general {
+  background: url("../../dist/img/icons/python.svg") no-repeat center center;
 }
 #intro-stack .biojs,
 #intro-stack .biopython {
@@ -712,16 +719,64 @@ linear-gradient(
 #intro-stack .js,
 #intro-stack .python {
   padding: 1rem;
-  position: relative;
-  min-height: 300px;
-}
-#intro-stack .js svg,
-#intro-stack .python svg {
   cursor: pointer;
-  position: absolute;
+}
+#intro-stack .js .general,
+#intro-stack .python .general {
+  width: 300px;
+  height: 300px;
+  position: relative;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+}
+#intro-stack .js .general div,
+#intro-stack .python .general div {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 150px 150px;
+}
+#intro-stack .js .general div:nth-child(1),
+#intro-stack .python .general div:nth-child(1) {
+  transform: rotateZ(0deg);
+}
+#intro-stack .js .general div:nth-child(1) img,
+#intro-stack .python .general div:nth-child(1) img {
+  transform: rotateZ(0deg);
+}
+#intro-stack .js .general div:nth-child(2),
+#intro-stack .python .general div:nth-child(2) {
+  transform: rotateZ(90deg);
+}
+#intro-stack .js .general div:nth-child(2) img,
+#intro-stack .python .general div:nth-child(2) img {
+  transform: rotateZ(-90deg);
+}
+#intro-stack .js .general div:nth-child(3),
+#intro-stack .python .general div:nth-child(3) {
+  transform: rotateZ(180deg);
+}
+#intro-stack .js .general div:nth-child(3) img,
+#intro-stack .python .general div:nth-child(3) img {
+  transform: rotateZ(-180deg);
+}
+#intro-stack .js .general div:nth-child(4),
+#intro-stack .python .general div:nth-child(4) {
+  transform: rotateZ(270deg);
+}
+#intro-stack .js .general div:nth-child(4) img,
+#intro-stack .python .general div:nth-child(4) img {
+  transform: rotateZ(-270deg);
+}
+#intro-stack .js:hover .general div,
+#intro-stack .python:hover .general div {
+  opacity: 1;
 }
 #intro-process {
   color: #333;
@@ -983,6 +1038,10 @@ linear-gradient(
     padding-top: 5rem;
   }
 
+  #intro-stack .grid {
+    grid-template-areas: "heading1" "biojs" "js" "heading2" "biopython" "python";
+  }
+
   .bc-main-a #main-logo {
     width: 100px;
     height: 100px;
@@ -1042,8 +1101,6 @@ linear-gradient(
   }
 
   #intro-skills .specials-tech,
-#civileng-experience .specials,
-#civileng-software .about-logos,
 #intro-process .process,
 #about-clients .testimonials,
 #contact-info .contact-info_items,
@@ -1084,24 +1141,6 @@ linear-gradient(
     display: grid;
     grid-template-areas: "desc" "bestimage";
     gap: 1rem;
-  }
-
-  #about-general .about-info {
-    grid-template-areas: "bio" "bioimage";
-  }
-
-  #civileng-stats .stats {
-    gap: 1rem;
-  }
-  #civileng-stats .stats > * {
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  }
-  #civileng-experience .specials > * > p {
-    display: none;
-  }
-  #civileng-skills {
-    display: none;
   }
 
   #portfolio-examples .cards-container {

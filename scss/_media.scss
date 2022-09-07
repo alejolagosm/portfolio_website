@@ -6,6 +6,17 @@
       padding-top: 5rem;
     }
   }
+  #intro {
+    &-stack .grid {
+      grid-template-areas:
+        'heading1'
+        'biojs'
+        'js'
+        'heading2'
+        'biopython'
+        'python';
+    }
+  }
   .bc-main {
     &-a {
       #main-logo {
@@ -80,8 +91,6 @@
   }
   // Stack Grid Columns
   #intro-skills .specials-tech,
-  #civileng-experience .specials,
-  #civileng-software .about-logos,
   #intro-process .process,
   #about-clients .testimonials,
   #contact-info .contact-info_items,
@@ -138,40 +147,8 @@
       }
     }
   }
-  // About
-  #about {
-    &-general {
-      .about-info {
-        grid-template-areas:
-          'bio'
-          'bioimage';
-      }
-    }
-  }
-  #civileng {
-    &-stats {
-      .stats {
-        gap: 1rem;
-        & > * {
-          border-radius: 10px;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-        }
-      }
-    }
-    &-experience {
-      .specials {
-        & > * > p {
-          display: none;
-        }
-      }
-    }
-    &-skills {
-      display: none;
-    }
-  }
   // Portfolio
   #portfolio-examples {
-    // background-color: $main-color;
     .cards-container {
       display: flex;
       flex-direction: column;
