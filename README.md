@@ -1,11 +1,7 @@
-# portfolio_website
+# Portfolio website
 
-This is my portfolio website.
+A static page built with Vanila JS, SASS and HTML.
 
-It has an intro page, a tech portfolio, some of my previous work as a structural engineer and a contact form.
-
-I made it using HTML, SCSS and Vanilla JS for some dinamic effects.
-
-In the future, I want to add more components to showcase other projects
+It has an index page with all my information, a web development and data science portfolio pages to showcase my latest projects and a contact page with a form that is powered using Netlify forms.
 
 Check out the demo at https://alejolagos.netlify.app/

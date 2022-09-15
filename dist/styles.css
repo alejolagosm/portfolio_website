@@ -686,7 +686,7 @@ linear-gradient(
   grid-area: js;
 }
 #intro-stack .js .general {
-  background: url("../../dist/img/icons/react.svg") no-repeat center center;
+  background: url("img/icons/react.svg") no-repeat center center;
   background-size: 80%;
 }
 #intro-stack .hdata {
@@ -700,7 +700,7 @@ linear-gradient(
   grid-area: python;
 }
 #intro-stack .python .general {
-  background: url("../../dist/img/icons/python.svg") no-repeat center center;
+  background: url("img/icons/python.svg") no-repeat center center;
 }
 #intro-stack .biojs,
 #intro-stack .biopython {
