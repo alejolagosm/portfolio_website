@@ -25,3 +25,19 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  //Footer
+  #main-footer {
+    height: auto;
+    .footer-content {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      height: auto;
+      .social {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

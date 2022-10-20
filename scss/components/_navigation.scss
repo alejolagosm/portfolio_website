@@ -35,3 +35,39 @@
     }
   }
 }
+
+// Smartphones
+@media (max-width: 500px) {
+  #main-nav {
+    align-items: center;
+    flex-direction: column;
+    .logo_burger {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+    ul {
+      flex-direction: column;
+    }
+    #menu {
+      display: none;
+      &.hidden {
+        display: block;
+      }
+    }
+    .burger-menu {
+      display: flex;
+      align-items: center;
+    }
+    li {
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+}

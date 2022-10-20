@@ -1,16 +1,5 @@
 // Projects Slider
-
-/*
-linear-gradient(
-      0deg,
-      rgba(7, 49, 58, 0) 0%,
-      rgba(17, 17, 17, 0.6) 100%
-    )
-
-*/
-
 .portfolio_2 {
-  // background-color: $medium-color;
   &-cards {
     display: flex;
     flex-direction: row;
@@ -37,12 +26,12 @@ linear-gradient(
     border-radius: 30px;
     cursor: pointer;
     transition: 1s;
+    color: #fff;
   }
 
   .active {
     flex-grow: 10;
     max-width: 600px;
-    // margin: 0px;
     .detail {
       bottom: 20px;
       left: 20px;
@@ -90,14 +79,49 @@ linear-gradient(
       justify-content: center;
       margin-left: 10px;
       background-color: rgba($main-color, 0.8);
-
       border-radius: 10px;
-
       text-transform: uppercase;
       font-weight: 700;
       > * {
         position: relative;
-        // transition: 0.5s opacity 0.5s ease-out;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #portfolio {
+    .portfolio_2 {
+      &-cards {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+        min-height: 600px;
+      }
+      &-card {
+        flex: 1;
+        width: 100%;
+        min-height: 60px;
+        background-size: 100% auto;
+        background-position: center;
+        &.active {
+          flex-grow: 20;
+          .detail {
+            .info > * {
+              font-size: 0.8rem;
+            }
+          }
+        }
+        &:not(.active) {
+          .detail {
+            display: none;
+          }
+        }
+      }
+      & > :not(.active) {
+        flex-grow: 1;
       }
     }
   }

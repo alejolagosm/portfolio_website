@@ -1,3 +1,58 @@
+// Variable
+// Variables
+$website-width: 1280px;
+$main-color: #781d42;
+$light-color: #ffff;
+$medium-color: #a3423c;
+$dark-color: #333;
+$bg-image: url('img/fondo_1.jpeg');
+$bg-image-civil: url('img/fondo_civil.jpg');
+$bg-image-tech: url('img/fondo_tech.jpg');
+
+// Functions
+@function set-text-color($color) {
+  @if (lightness($color) >50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+//Mixins
+@mixin centerel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Mixin for media queries
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // 600px/16px = 37.5em: This is better because it implements the root font size defined by the user or the browser
+    // The 'only screen' works so this only applies in screens but not if someone wants to print the page
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desk {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+// Utility classes
 .container {
   max-width: $website-width;
   padding: 0 1.5rem;
@@ -5,7 +60,6 @@
   overflow: hidden;
 }
 
-// Backgrounds
 .bg {
   &-main {
     background: $main-color;
@@ -25,7 +79,6 @@
   }
 }
 
-// padding
 .py {
   &-1 {
     padding: 1rem;
@@ -41,7 +94,6 @@
   }
 }
 
-// Margin
 .my {
   &-1 {
     margin: 1rem 0;
@@ -84,7 +136,6 @@
   text-align: center;
 }
 
-// Logo
 #logo {
   width: 50px;
   height: 50px;

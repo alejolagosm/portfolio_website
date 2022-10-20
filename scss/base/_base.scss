@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *,
 *::after,
 *::before {
@@ -23,4 +25,144 @@ h4 {
 }
 img {
   width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #ffff;
+}
+
+.headingpr {
+  color: $main-color;
+  margin-bottom: 6rem;
+
+  &--main {
+    color: $main-color;
+    font-size: 2rem;
+    letter-spacing: 1.2rem;
+    animation: moveInLeft 1s ease-out;
+    @include respond(phone) {
+      color: $medium-color;
+      letter-spacing: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  &--sub {
+    color: $medium-color;
+    display: block;
+    font-size: 2rem;
+    // font-weight: 700px;
+    letter-spacing: 0.5rem;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+.headingsec {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, $main-color, $dark-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
+  &:hover {
+    transform: skew(5deg, -6deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($dark-color, 0.2);
+  }
+}
+
+.headingth {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $medium-color;
+}
+
+.paragraph {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: transform 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+    max-width: 150px;
+  }
+  &-portfolio {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+}
+// The ^ permits to select any color with the btn- in the name
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-image: linear-gradient(
+    to right bottom,
+    #781d42,
+    #812341,
+    #8a2941,
+    #92303f,
+    #9a373e,
+    #a64741,
+    #b05645,
+    #ba6649,
+    #c98156,
+    #d79c66,
+    #e4b779,
+    #f0d290
+  );
+  transform: scale(1.05);
+  color: #000;
+  font-weight: 700;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
