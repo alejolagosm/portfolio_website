@@ -1,10 +1,17 @@
 // Main Nav
 #main-nav {
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
   background-color: $main-color;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 10vw;
+  z-index: 30;
+  min-height: 4rem;
+  font-size: 90%;
   ul {
     display: flex;
   }
@@ -25,14 +32,22 @@
     color: #fff;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
-    padding-bottom: 0.5rem;
     transition: border-color 0.5s;
+    display: grid;
+    place-content: center;
     &:hover {
       border-color: $medium-color;
     }
     &.current {
       border-color: $dark-color;
     }
+  }
+
+  #logo {
+    padding: 0.5rem;
+    object-fit: contain;
+    color: #fff;
+    text-transform: uppercase;
   }
 }
 

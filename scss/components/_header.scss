@@ -1,44 +1,57 @@
 // Header
 #header {
-  // Header intro
-  &-main {
-    .header__intro {
-      // background-color: $main-color;
-      height: 100vh;
-      position: relative;
-      background: linear-gradient(
-          180deg,
-          rgba(40, 40, 40, 0.2) 0%,
-          rgba(17, 17, 17, 0.6) 100%
-        ),
-        $bg-image no-repeat 20% 25% / cover;
-      height: 50vh;
+  box-sizing: border-box;
+  position: relative;
+  // min-height: calc(500px + 4rem);
+  //
+  background: linear-gradient(
+      180deg,
+      rgba(40, 40, 40, 0.4) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    $bg-image no-repeat 20% 25% / cover;
+  font-size: 1.2rem;
+
+  text-align: left;
+
+  .container {
+    padding: 0 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__text {
+    flex-grow: 1;
+    p {
       font-size: 1.2rem;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      #main-logo {
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        width: 150px;
-        height: 150px;
-      }
-      p {
-        font-size: 1.2rem;
-      }
     }
   }
 
-  .header-content {
-    padding-top: 5rem;
-    h1 {
-      font-size: 4rem;
-      line-height: 1.2;
+  img {
+    flex-basis: 25%;
+    align-self: flex-end;
+    height: 500px;
+    object-fit: contain;
+    overflow: hidden;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+  }
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  #header {
+    font-size: 80%;
+    .container {
+      max-height: calc(75vh - 4rem);
+      flex-direction: column;
     }
-    p {
-      font-weight: bold;
+    .header__text {
+      margin-top: 2rem;
+      p {
+        display: none;
+      }
     }
   }
 }

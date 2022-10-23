@@ -5,9 +5,7 @@ $main-color: #781d42;
 $light-color: #ffff;
 $medium-color: #a3423c;
 $dark-color: #333;
-$bg-image: url('img/fondo_1.jpeg');
-$bg-image-civil: url('img/fondo_civil.jpg');
-$bg-image-tech: url('img/fondo_tech.jpg');
+$bg-image: url('img/sequoia.jpg');
 
 // Functions
 @function set-text-color($color) {
@@ -124,7 +122,7 @@ $bg-image-tech: url('img/fondo_tech.jpg');
   width: 50%;
   background: $main-color;
   display: block;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 0.5rem auto;
 }
 
 .lead {
@@ -134,11 +132,4 @@ $bg-image-tech: url('img/fondo_tech.jpg');
 }
 .text-center {
   text-align: center;
-}
-
-#logo {
-  width: 50px;
-  height: 50px;
-  color: #fff;
-  text-transform: uppercase;
 }

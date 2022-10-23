@@ -7,9 +7,15 @@
   padding: 0;
   box-sizing: inherit;
 }
+html {
+  scroll-behavior: smooth;
+}
+:target {
+  scroll-margin-top: 5rem;
+}
 body {
-  // font-size: 62.5%;
-  background: #fff;
+  font-size: 80%;
+  // background: $medium-color;
 }
 a {
   text-decoration: none;
