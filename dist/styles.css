@@ -64,7 +64,7 @@
   width: 50%;
   background: #781d42;
   display: block;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 0.5rem auto;
 }
 
 .lead {
@@ -77,13 +77,6 @@
   text-align: center;
 }
 
-#logo {
-  width: 50px;
-  height: 50px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
 *,
 *::after,
 *::before {
@@ -92,8 +85,16 @@
   box-sizing: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 5rem;
+}
+
 body {
-  background: #fff;
+  font-size: 80%;
 }
 
 a {
@@ -235,44 +236,63 @@ input[class^=btn-]:hover {
     transform: translateX(0px);
   }
 }
-#header-main .header__intro {
-  height: 100vh;
+#header {
+  box-sizing: border-box;
   position: relative;
-  background: linear-gradient(180deg, rgba(40, 40, 40, 0.2) 0%, rgba(17, 17, 17, 0.6) 100%), url("img/fondo_1.jpeg") no-repeat 20% 25%/cover;
-  height: 50vh;
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0.4) 0%, rgba(17, 17, 17, 0.6) 100%), url("img/sequoia.jpg") no-repeat 20% 25%/cover;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
+}
+#header .container {
+  padding: 0 2rem 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-#header-main .header__intro #main-logo {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 150px;
-  height: 150px;
+#header .header__text {
+  flex-grow: 1;
 }
-#header-main .header__intro p {
+#header .header__text p {
   font-size: 1.2rem;
 }
-#header .header-content {
-  padding-top: 5rem;
-}
-#header .header-content h1 {
-  font-size: 4rem;
-  line-height: 1.2;
-}
-#header .header-content p {
-  font-weight: bold;
+#header img {
+  flex-basis: 25%;
+  align-self: flex-end;
+  height: 500px;
+  object-fit: contain;
+  overflow: hidden;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
 }
 
+@media (max-width: 500px) {
+  #header {
+    font-size: 80%;
+  }
+  #header .container {
+    max-height: calc(75vh - 4rem);
+    flex-direction: column;
+  }
+  #header .header__text {
+    margin-top: 2rem;
+  }
+  #header .header__text p {
+    display: none;
+  }
+}
 #main-nav {
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
   background-color: #781d42;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 10vw;
+  z-index: 30;
+  min-height: 4rem;
+  font-size: 90%;
 }
 #main-nav ul {
   display: flex;
@@ -292,14 +312,21 @@ input[class^=btn-]:hover {
   color: #fff;
   text-transform: uppercase;
   border-bottom: 3px transparent solid;
-  padding-bottom: 0.5rem;
   transition: border-color 0.5s;
+  display: grid;
+  place-content: center;
 }
 #main-nav a:hover {
   border-color: #a3423c;
 }
 #main-nav a.current {
   border-color: #333;
+}
+#main-nav #logo {
+  padding: 0.5rem;
+  object-fit: contain;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 @media (max-width: 500px) {
@@ -475,13 +502,14 @@ input[class^=btn-]:hover {
   justify-content: center;
   align-items: stretch;
   overflow: hidden;
-  padding: 2rem;
+  padding: 0.5rem;
   height: 400px;
   min-width: 600px;
   max-width: 900px;
   width: calc(100% - 100px);
 }
 .portfolio_2-card {
+  border: 1px solid rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
   min-width: 60px;
@@ -492,9 +520,7 @@ input[class^=btn-]:hover {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 30px;
-  cursor: pointer;
   transition: 1s;
-  color: #fff;
 }
 .portfolio_2 .active {
   flex-grow: 10;
@@ -504,9 +530,10 @@ input[class^=btn-]:hover {
   bottom: 20px;
   left: 20px;
 }
-.portfolio_2 .active .detail .info > div {
+.portfolio_2 .active .detail .info > a {
   left: 0px;
   opacity: 1;
+  color: #000;
 }
 .portfolio_2 > :not(.active) {
   flex-grow: 1;
@@ -535,7 +562,8 @@ input[class^=btn-]:hover {
   max-width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #781d42;
+  background-color: #a3423c;
+  color: #000000;
 }
 .portfolio_2 .detail .info {
   padding: 0 2rem;
@@ -544,10 +572,14 @@ input[class^=btn-]:hover {
   flex-direction: column;
   justify-content: center;
   margin-left: 10px;
-  background-color: rgba(120, 29, 66, 0.8);
+  background-color: #a3423c;
   border-radius: 10px;
   text-transform: uppercase;
   font-weight: 700;
+}
+.portfolio_2 .detail .info:hover {
+  background-color: #781d42;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .portfolio_2 .detail .info > * {
   position: relative;
@@ -583,7 +615,7 @@ input[class^=btn-]:hover {
   }
 }
 #intro {
-  margin: 60px 0;
+  margin: 1rem 0 3rem;
 }
 #intro .intro-stack .flex {
   color: #fff;
@@ -739,7 +771,7 @@ input[class^=btn-]:hover {
 #portfolio .portfolio_1 .cards-container {
   display: flex;
   flex-direction: row;
-  margin: 2rem 0;
+  margin: 1rem 0;
   justify-content: space-between;
   gap: 2rem;
 }
