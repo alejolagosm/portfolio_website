@@ -3,86 +3,90 @@
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  background-color: $main-color;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 10vw;
+  background-color: $main-color;
   z-index: 30;
-  min-height: 4rem;
-  font-size: 90%;
-  ul {
+  .container {
     display: flex;
-  }
-  .burger-menu {
-    &_svg {
-      width: 2rem;
-      height: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 10vw;
+    min-height: 4rem;
+    font-size: 90%;
+    ul {
+      display: flex;
     }
-  }
-  .hidden {
-    display: none;
-  }
-  li {
-    padding: 1rem 1.5rem;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    border-bottom: 3px transparent solid;
-    transition: border-color 0.5s;
-    display: grid;
-    place-content: center;
-    &:hover {
-      border-color: $medium-color;
+    .burger-menu {
+      &_svg {
+        width: 2rem;
+        height: 2rem;
+      }
     }
-    &.current {
-      border-color: $dark-color;
+    .hidden {
+      display: none;
     }
-  }
+    li {
+      padding: 1rem 1.5rem;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      border-bottom: 3px transparent solid;
+      transition: border-color 0.5s;
+      display: grid;
+      place-content: center;
+      &:hover {
+        border-color: $medium-color;
+      }
+      &.current {
+        border-color: $dark-color;
+      }
+    }
 
-  #logo {
-    padding: 0.5rem;
-    object-fit: contain;
-    color: #fff;
-    text-transform: uppercase;
+    #logo {
+      padding: 0.5rem;
+      object-fit: contain;
+      color: #fff;
+      text-transform: uppercase;
+    }
   }
 }
 
 // Smartphones
 @media (max-width: 500px) {
   #main-nav {
-    align-items: center;
-    flex-direction: column;
-    .logo_burger {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
+    .container {
       align-items: center;
-      a {
-        padding: 0;
+      flex-direction: column;
+      .logo_burger {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          padding: 0;
+          display: flex;
+          align-items: center;
+        }
+      }
+      ul {
+        flex-direction: column;
+      }
+      #menu {
+        display: none;
+        &.hidden {
+          display: block;
+        }
+      }
+      .burger-menu {
         display: flex;
         align-items: center;
       }
-    }
-    ul {
-      flex-direction: column;
-    }
-    #menu {
-      display: none;
-      &.hidden {
-        display: block;
+      li {
+        padding: 1rem;
+        text-align: center;
       }
-    }
-    .burger-menu {
-      display: flex;
-      align-items: center;
-    }
-    li {
-      padding: 1rem;
-      text-align: center;
     }
   }
 }

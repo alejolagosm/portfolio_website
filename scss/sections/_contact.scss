@@ -41,7 +41,7 @@
     color: $dark-color;
     .contact-info_items {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
       text-align: center;
       gap: 1rem;
       i {
