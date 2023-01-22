@@ -1,21 +1,29 @@
 // Navigation Media Query hidden
-const burger = document.querySelector("#burger");
-const menu = document.querySelector("#menu");
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-burger.addEventListener("click", () => {
-  if (menu.classList.contains("hidden")) {
-    menu.classList.remove("hidden");
-  } else {
-    menu.classList.add("hidden");
-  }
-});
+hamburger.addEventListener('click', mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+}
+
+const navLink = document.querySelectorAll('.nav-link');
+
+navLink.forEach(n => n.addEventListener('click', closeMenu));
+
+function closeMenu() {
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('active');
+}
 
 // Typewrite class for the typing effect on the intro page
 class TypeWriter {
   constructor(txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;
-    this.txt = "";
+    this.txt = '';
     this.wordIndex = 0;
     this.wait = parseInt(wait, 10);
     this.type();
@@ -53,7 +61,7 @@ class TypeWriter {
       typeSpeed = this.wait;
       // Set delete to true
       this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
+    } else if (this.isDeleting && this.txt === '') {
       this.isDeleting = false;
       // Move to next word
       this.wordIndex++;
@@ -66,20 +74,20 @@ class TypeWriter {
 }
 
 // Init On DOM Load
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener('DOMContentLoaded', init);
 
 // Init Typewrite on DOM load
 function init() {
-  const txtElement = document.querySelector(".txt-type");
-  const words = JSON.parse(txtElement.getAttribute("data-words"));
-  const wait = txtElement.getAttribute("data-wait");
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
 
 // Portfolio component: Slider cards
-const cards = document.querySelector(".portfolio_2-cards");
-cards.addEventListener("click", function (e) {
-  Array.from(cards.children).forEach((card) => card.classList.remove("active"));
-  e.target.closest(".portfolio_2-card").classList.add("active");
+const cards = document.querySelector('.portfolio_2-cards');
+cards.addEventListener('click', function (e) {
+  Array.from(cards.children).forEach(card => card.classList.remove('active'));
+  e.target.closest('.portfolio_2-card').classList.add('active');
 });
