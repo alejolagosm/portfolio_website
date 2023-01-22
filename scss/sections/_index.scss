@@ -1,35 +1,27 @@
 @use 'sass:math';
 
 #intro {
-  margin: 1rem 0 3rem;
+  margin: 2rem 0 3rem;
   .intro-stack {
     .flex {
-      color: #fff;
+      margin: 3rem;
       display: flex;
-      gap: 1rem;
-      max-width: 800px;
-      height: auto;
+      text-align: center;
       align-items: center;
       justify-content: center;
-      margin: auto;
+      color: $light-color;
     }
 
     .js {
       .general {
-        background: url('img/icons/react.svg') no-repeat center center;
+        background: url('img/icons/code.svg') no-repeat center center;
         background-size: 80%;
       }
     }
-    .python {
-      .general {
-        background: url('img/icons/python.svg') no-repeat center center;
-      }
-    }
-    .js,
-    .python {
+    .js {
       $wrap_size: 300px;
       $item_size: 60px;
-      $num_of_items: 4;
+      $num_of_items: 8;
       padding: 1rem;
       cursor: pointer;
       position: relative;
@@ -40,7 +32,7 @@
         position: relative;
 
         div {
-          opacity: 0;
+          // opacity: 0;
           width: $item_size;
           height: $item_size;
           text-align: center;
@@ -63,92 +55,15 @@
         }
       }
     }
-    .js:hover,
-    .python:hover {
-      .general {
-        div {
-          opacity: 1;
-        }
-      }
-    }
   }
-
-  .intro-process {
-    color: $dark-color;
-    .process {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-      grid-gap: 1.5rem;
-      text-align: center;
-
-      &-step {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 28px;
-        background: $main-color;
-        color: set-text-color($main-color);
-        border-radius: 50%;
-        height: 15px;
-        width: 15px;
-        line-height: 15px;
-        padding: 1rem;
-        transition: all 0.5s;
-        display: grid;
-        place-content: center;
-      }
-
-      &-icon {
-        border-radius: 50%;
-        background: $dark-color;
-        color: set-text-color($dark-color);
-        padding: 2rem;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        text-align: center;
-        position: relative;
-        transition: all 1s;
-        &:before {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          transition: all 1s;
-        }
-        &:hover {
-          background: $main-color;
-          .process-step {
-            background: $dark-color;
-            color: set-text-color($dark-color);
-          }
-        }
-      }
-    }
-  }
-
-  // .intro-skills {
-  //   .specials-tech {
-  //     color: $dark-color;
-  //     margin-top: 3rem;
-  //     display: grid;
-  //     grid-gap: 1rem;
-  //     grid-template-columns: repeat(3, 1fr);
-  //     .fas,
-  //     .fab,
-  //     .far {
-  //       color: $main-color;
-  //       padding-bottom: 0.4rem;
-  //     }
-  //   }
-  // }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #intro {
+    margin: 2rem 0 3rem;
     .intro-stack {
       .flex {
-        flex-direction: column;
+        margin: 2rem;
       }
     }
   }

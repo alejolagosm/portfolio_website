@@ -1,13 +1,12 @@
 @import 'base/utilities';
 @import 'base/base';
 
-@import 'components/header';
 @import 'components/navigation';
+@import 'components/header';
+
 @import 'components/footer';
 
-@import 'components/stack';
-@import 'components/card';
-@import 'components/slider';
+@import 'components/portfolio_card';
 
 @import 'sections/index';
 @import 'sections/portfolio';
