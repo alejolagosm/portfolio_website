@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 #intro {
   margin: 2rem 0 3rem;
@@ -14,7 +14,7 @@
 
     .js {
       .general {
-        background: url('img/icons/code.svg') no-repeat center center;
+        background: url("img/icons/code.svg") no-repeat center center;
         background-size: 80%;
       }
     }
@@ -23,7 +23,6 @@
       $item_size: 60px;
       $num_of_items: 8;
       padding: 1rem;
-      cursor: pointer;
       position: relative;
 
       .general {

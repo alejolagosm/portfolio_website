@@ -3,9 +3,9 @@
   .intro {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 5rem;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     h1 span {
       font-size: 3rem;
     }
@@ -23,8 +23,8 @@
     }
 
     img {
-      --s: 350px; /* image size */
-      --b: 5px; /* border thickness */
+      --s: 250px; /* image size */
+      --b: 3px; /* border thickness */
       --c: #ffff; /* border color */
       --f: 1; /* initial scale */
       width: var(--s);
@@ -50,7 +50,7 @@
       transition: 0.5s;
     }
     img:hover {
-      --f: 1.35;
+      --f: 1.2;
     }
   }
 }
