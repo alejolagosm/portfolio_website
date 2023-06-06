@@ -15,7 +15,7 @@
   color: #fff;
 }
 .bg-light {
-  background: #ffff;
+  background: white;
   color: #000;
 }
 .bg-medium {
@@ -68,7 +68,7 @@
 }
 
 .lead {
-  color: #ffff;
+  color: white;
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
@@ -121,7 +121,7 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #ffff;
+  color: white;
 }
 
 .headingpr {
@@ -195,7 +195,7 @@ body {
 }
 .btn-light {
   color: #333;
-  background-color: #ffff;
+  background-color: white;
 }
 .btn-dark {
   color: #f4f4f4;
@@ -247,7 +247,7 @@ input[class^=btn-]:hover {
 }
 #main-nav .container .hamburger {
   display: none;
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
 }
@@ -256,9 +256,8 @@ input[class^=btn-]:hover {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #ffff;
+  background-color: white;
 }
 #main-nav .container .nav-menu {
   display: flex;
@@ -271,7 +270,7 @@ input[class^=btn-]:hover {
 #main-nav .container .nav-link {
   font-size: 1.2rem;
   font-weight: 400;
-  color: #ffff;
+  color: white;
 }
 #main-nav .container .nav-link:hover {
   color: #a3423c;
@@ -314,9 +313,9 @@ input[class^=btn-]:hover {
 #header .intro {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 5rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 #header .intro h1 span {
   font-size: 3rem;
@@ -329,18 +328,15 @@ input[class^=btn-]:hover {
 }
 #header .intro p a {
   color: #781d42;
-  text-decoration: wavy underline;
+  -webkit-text-decoration: wavy underline;
+          text-decoration: wavy underline;
   font-weight: bold;
 }
 #header .intro img {
-  --s: 350px;
-  /* image size */
-  --b: 5px;
-  /* border thickness */
-  --c: #ffff;
-  /* border color */
-  --f: 1;
-  /* initial scale */
+  --s: 250px; /* image size */
+  --b: 3px; /* border thickness */
+  --c: #ffff; /* border color */
+  --f: 1; /* initial scale */
   width: var(--s);
   aspect-ratio: 1;
   padding-top: calc(var(--s) / 5);
@@ -350,13 +346,13 @@ input[class^=btn-]:hover {
   --_o: calc((1 / var(--f) - 1) * var(--s) / 2 - var(--b));
   outline: var(--b) solid var(--c);
   outline-offset: var(--_o);
-  background: radial-gradient(circle closest-side, #781d42 calc(99% - var(--b)), var(--c) calc(100% - var(--b)) 99%, #0000) var(--_g);
-  -webkit-mask: linear-gradient(#000 0 0) no-repeat 50% calc(1px - var(--_o))/calc(100% / var(--f) - 2 * var(--b) - 2px) 50%, radial-gradient(circle closest-side, #000 99%, #0000) var(--_g);
+  background: radial-gradient(circle closest-side, #781d42 calc(99% - var(--b)), var(--c) calc(100% - var(--b)) 99%, rgba(0, 0, 0, 0)) var(--_g);
+  -webkit-mask: linear-gradient(#000 0 0) no-repeat 50% calc(1px - var(--_o))/calc(100% / var(--f) - 2 * var(--b) - 2px) 50%, radial-gradient(circle closest-side, #000 99%, rgba(0, 0, 0, 0)) var(--_g);
   transform: scale(var(--f));
   transition: 0.5s;
 }
 #header .intro img:hover {
-  --f: 1.35;
+  --f: 1.2;
 }
 
 @media (max-width: 500px) {
@@ -416,7 +412,7 @@ input[class^=btn-]:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
   grid-gap: 1rem;
-  color: #ffff;
+  color: white;
 }
 #portfolio_cards .card .wrapper {
   background-color: #a3423c;
@@ -431,7 +427,7 @@ input[class^=btn-]:hover {
 #portfolio_cards .card .data {
   position: absolute;
   bottom: 0;
-  transform: translateY(5rem);
+  transform: translateY(30rem);
   transition: transform 0.3s;
 }
 #portfolio_cards .card .data .content {
@@ -448,7 +444,7 @@ input[class^=btn-]:hover {
   top: 0;
   left: 0;
   background-color: #781d42;
-  color: #ffff;
+  color: white;
   padding: 1rem;
   border-radius: 0 0 50%;
 }
@@ -473,45 +469,26 @@ input[class^=btn-]:hover {
   box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-}
-#portfolio_cards .card .menu-button {
-  position: absolute;
-  top: 18px;
-  right: 16px;
-  width: 30px;
-  text-align: center;
-  cursor: pointer;
-}
-#portfolio_cards .card .menu-button span {
-  width: 6px;
-  height: 6px;
-  background-color: #ffff;
-  color: #ffff;
-  position: relative;
-  display: inline-block;
-  border-radius: 20%;
-}
-#portfolio_cards .card .menu-button span::after, #portfolio_cards .card .menu-button span::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  background-color: currentColor;
-  position: absolute;
-  border-radius: 20%;
-}
-#portfolio_cards .card .menu-button span::before {
-  left: -12px;
-}
-#portfolio_cards .card .menu-button span::after {
-  right: -12px;
+  gap: 0.5rem;
 }
 #portfolio_cards .card .menu-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 2rem;
   font-size: 1rem;
+}
+#portfolio_cards .card .menu-content li a {
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+}
+#portfolio_cards .card .menu-content li a i {
+  margin-right: 0.5rem;
+}
+#portfolio_cards .card .menu-content li a:hover {
+  border: 1px solid #000;
+  color: #000;
 }
 #portfolio_cards .example-1 .wrapper {
   background: url("img/pj/main_1.gif") center/cover no-repeat;
@@ -532,7 +509,7 @@ input[class^=btn-]:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #ffff;
+  color: white;
 }
 #intro .intro-stack .js .general {
   background: url("img/icons/code.svg") no-repeat center center;
@@ -540,7 +517,6 @@ input[class^=btn-]:hover {
 }
 #intro .intro-stack .js {
   padding: 1rem;
-  cursor: pointer;
   position: relative;
 }
 #intro .intro-stack .js .general {
@@ -618,26 +594,22 @@ input[class^=btn-]:hover {
 #portfolio {
   color: #333;
 }
-#portfolio .portfolio-intro {
+#portfolio .portfolio_2 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  gap: 5rem;
+}
+#portfolio .portfolio_3 {
   color: #333;
 }
-#portfolio .portfolio-intro a {
-  color: #333;
-  text-decoration: underline;
-}
-#portfolio .intro-process {
-  color: #333;
-}
-#portfolio .intro-process .process {
+#portfolio .portfolio_3 .process {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 1.5rem;
   text-align: center;
 }
-#portfolio .intro-process .process-step {
+#portfolio .portfolio_3 .process-step {
   position: absolute;
   top: 0;
   right: 0;
@@ -653,7 +625,7 @@ input[class^=btn-]:hover {
   display: grid;
   place-content: center;
 }
-#portfolio .intro-process .process-icon {
+#portfolio .portfolio_3 .process-icon {
   border-radius: 50%;
   background: #333;
   color: #fff;
@@ -665,17 +637,17 @@ input[class^=btn-]:hover {
   position: relative;
   transition: all 1s;
 }
-#portfolio .intro-process .process-icon:before {
+#portfolio .portfolio_3 .process-icon:before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 1s;
 }
-#portfolio .intro-process .process-icon:hover {
+#portfolio .portfolio_3 .process-icon:hover {
   background: #781d42;
 }
-#portfolio .intro-process .process-icon:hover .process-step {
+#portfolio .portfolio_3 .process-icon:hover .process-step {
   background: #333;
   color: #fff;
 }
@@ -684,7 +656,7 @@ input[class^=btn-]:hover {
   margin: 30px 0;
 }
 #contact .contact-form {
-  color: #ffff;
+  color: white;
 }
 #contact .contact-form .text-fields {
   display: grid;
@@ -729,6 +701,4 @@ input[class^=btn-]:hover {
   #contact .contact-form .text-fields .message-input {
     grid-row: 5;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
