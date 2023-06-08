@@ -8,14 +8,13 @@
     padding: 1rem 1.5rem;
 
     #logo {
-      height: 2rem;
-      width: 2rem;
-      color: #fff;
+      height: 3rem;
+      width: 3rem;
     }
 
     .hamburger {
       display: none;
-      background-color: #0000;
+      background-color: $main-color;
       border: none;
       cursor: pointer;
     }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 *,
 *::after,
@@ -15,11 +15,12 @@ html {
 }
 body {
   font-size: 80%;
-  background: $medium-color;
+  background: $light-color;
+  color: $dark-color;
 }
 a {
   text-decoration: none;
-  color: #fff;
+  color: $dark-color;
 }
 ul {
   list-style: none;
@@ -34,10 +35,9 @@ img {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #ffff;
 }
 
 .headingpr {
@@ -136,22 +136,12 @@ body {
   }
 }
 // The ^ permits to select any color with the btn- in the name
-button[class^='btn-']:hover,
-a[class^='btn-']:hover,
-input[class^='btn-']:hover {
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
   background-image: linear-gradient(
     to right bottom,
-    #781d42,
-    #812341,
-    #8a2941,
-    #92303f,
-    #9a373e,
-    #a64741,
-    #b05645,
-    #ba6649,
-    #c98156,
-    #d79c66,
-    #e4b779,
+    $medium-color 60%,
     #f0d290
   );
   transform: scale(1.05);

@@ -1,20 +1,21 @@
 // Header
 #header {
   .intro {
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     gap: 5rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     h1 span {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       a {
         color: $main-color;
         text-decoration: wavy underline;
@@ -23,7 +24,17 @@
     }
 
     img {
-      --s: 250px; /* image size */
+      width: 500px;
+      aspect-ratio: 1;
+      background: radial-gradient(
+        circle closest-side,
+        $medium-color 70%,
+        #fff 100%
+      );
+    }
+
+    .img {
+      --s: 500px; /* image size */
       --b: 3px; /* border thickness */
       --c: #ffff; /* border color */
       --f: 1; /* initial scale */

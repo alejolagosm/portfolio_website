@@ -1,11 +1,11 @@
 // Variable
 // Variables
-$website-width: 1280px;
-$main-color: #781d42;
-$light-color: #ffff;
-$medium-color: #a3423c;
-$dark-color: #333;
-$bg-image: url('img/sequoia.jpg');
+$website-width: 1100px;
+$main-color: #373b44;
+$medium-color: #aa4b6b;
+$light-color: #fff;
+$dark-color: #000;
+$bg-image: url("img/sequoia.jpg");
 
 // Functions
 @function set-text-color($color) {
@@ -69,7 +69,7 @@ $bg-image: url('img/sequoia.jpg');
   }
   &-light {
     background: $light-color;
-    color: set-text-color($light-color);
+    color: set-text-color($dark-color);
   }
   &-medium {
     background: $medium-color;
