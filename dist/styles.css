@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .container {
-  max-width: 1280px;
+  max-width: 1100px;
   padding: 0 1.5rem;
   margin: auto;
   overflow: hidden;
 }
 
 .bg-main {
-  background: #781d42;
+  background: #373b44;
   color: #fff;
 }
 .bg-dark {
-  background: #333;
+  background: #000;
   color: #fff;
 }
 .bg-light {
-  background: white;
-  color: #000;
+  background: #fff;
+  color: #fff;
 }
 .bg-medium {
-  background: #a3423c;
+  background: #aa4b6b;
   color: #fff;
 }
 
@@ -52,7 +52,7 @@
 .section-title {
   font-size: 2rem;
   display: block;
-  color: #333;
+  color: #000;
   padding-bottom: 0.5rem;
   text-align: center;
   font-weight: 700;
@@ -62,13 +62,13 @@
 .bottom-line {
   height: 2px;
   width: 50%;
-  background: #781d42;
+  background: #373b44;
   display: block;
   margin: 0 auto 0.5rem auto;
 }
 
 .lead {
-  color: white;
+  color: #fff;
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
@@ -95,12 +95,13 @@ html {
 
 body {
   font-size: 80%;
-  background: #a3423c;
+  background: #fff;
+  color: #000;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 ul {
@@ -121,28 +122,27 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: white;
 }
 
 .headingpr {
-  color: #781d42;
+  color: #373b44;
   margin-bottom: 6rem;
 }
 .headingpr--main {
-  color: #781d42;
+  color: #373b44;
   font-size: 2rem;
   letter-spacing: 1.2rem;
   animation: moveInLeft 1s ease-out;
 }
 @media only screen and (max-width: 37.5em) {
   .headingpr--main {
-    color: #a3423c;
+    color: #aa4b6b;
     letter-spacing: 0.5rem;
     font-size: 1.5rem;
   }
 }
 .headingpr--sub {
-  color: #a3423c;
+  color: #aa4b6b;
   display: block;
   font-size: 2rem;
   letter-spacing: 0.5rem;
@@ -159,7 +159,7 @@ body {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #781d42;
+  color: #373b44;
 }
 @media only screen and (max-width: 37.5em) {
   .headingsec {
@@ -167,14 +167,14 @@ body {
   }
 }
 .headingsec:hover {
-  text-shadow: 0.5rem 1rem 2rem rgba(51, 51, 51, 0.2);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .headingth {
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #a3423c;
+  color: #aa4b6b;
 }
 
 .paragraph:not(:last-child) {
@@ -191,20 +191,20 @@ body {
 
 .btn-main {
   color: #333;
-  background-color: #781d42;
+  background-color: #373b44;
 }
 .btn-light {
   color: #333;
-  background-color: white;
+  background-color: #fff;
 }
 .btn-dark {
   color: #f4f4f4;
-  background-color: #333;
+  background-color: #000;
   max-width: 150px;
 }
 .btn-portfolio {
   color: #f4f4f4;
-  background-color: #333;
+  background-color: #000;
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
@@ -212,7 +212,7 @@ body {
 button[class^=btn-]:hover,
 a[class^=btn-]:hover,
 input[class^=btn-]:hover {
-  background-image: linear-gradient(to right bottom, #781d42, #812341, #8a2941, #92303f, #9a373e, #a64741, #b05645, #ba6649, #c98156, #d79c66, #e4b779, #f0d290);
+  background-image: linear-gradient(to right bottom, #aa4b6b 60%, #f0d290);
   transform: scale(1.05);
   color: #000;
   font-weight: 700;
@@ -232,7 +232,7 @@ input[class^=btn-]:hover {
   }
 }
 #main-nav {
-  background-color: #781d42;
+  background-color: #373b44;
 }
 #main-nav .container {
   display: flex;
@@ -241,13 +241,12 @@ input[class^=btn-]:hover {
   padding: 1rem 1.5rem;
 }
 #main-nav .container #logo {
-  height: 2rem;
-  width: 2rem;
-  color: #fff;
+  height: 3rem;
+  width: 3rem;
 }
 #main-nav .container .hamburger {
   display: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #373b44;
   border: none;
   cursor: pointer;
 }
@@ -257,7 +256,7 @@ input[class^=btn-]:hover {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: white;
+  background-color: #fff;
 }
 #main-nav .container .nav-menu {
   display: flex;
@@ -270,10 +269,10 @@ input[class^=btn-]:hover {
 #main-nav .container .nav-link {
   font-size: 1.2rem;
   font-weight: 400;
-  color: white;
+  color: #fff;
 }
 #main-nav .container .nav-link:hover {
-  color: #a3423c;
+  color: #aa4b6b;
 }
 
 @media only screen and (max-width: 768px) {
@@ -282,7 +281,7 @@ input[class^=btn-]:hover {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #781d42;
+    background-color: #373b44;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -311,29 +310,35 @@ input[class^=btn-]:hover {
   }
 }
 #header .intro {
+  margin-top: 3rem;
   display: flex;
   flex-direction: row;
   gap: 5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 #header .intro h1 span {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 #header .intro h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 #header .intro p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 #header .intro p a {
-  color: #781d42;
+  color: #373b44;
   -webkit-text-decoration: wavy underline;
           text-decoration: wavy underline;
   font-weight: bold;
 }
 #header .intro img {
-  --s: 250px; /* image size */
+  width: 500px;
+  aspect-ratio: 1;
+  background: radial-gradient(circle closest-side, #aa4b6b 70%, #fff 100%);
+}
+#header .intro .img {
+  --s: 500px; /* image size */
   --b: 3px; /* border thickness */
   --c: #ffff; /* border color */
   --f: 1; /* initial scale */
@@ -372,7 +377,7 @@ input[class^=btn-]:hover {
   }
 }
 #main-footer {
-  background: #333;
+  background: #000;
   color: #fff;
   height: 5rem;
   display: flex;
@@ -380,18 +385,21 @@ input[class^=btn-]:hover {
   height: 5rem;
   align-items: center;
 }
+#main-footer .footer-content a {
+  color: #fff;
+}
 #main-footer .footer-content .fab {
   margin-right: 1rem;
   border: 2px #fff solid;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  line-height: 20px;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 1.5rem;
   text-align: center;
   padding: 0.5rem;
 }
 #main-footer .footer-content .fab:hover {
-  background: #781d42;
+  background: #aa4b6b;
 }
 
 @media (max-width: 500px) {
@@ -412,10 +420,10 @@ input[class^=btn-]:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
   grid-gap: 1rem;
-  color: white;
+  color: #fff;
 }
 #portfolio_cards .card .wrapper {
-  background-color: #a3423c;
+  background-color: #aa4b6b;
   min-height: 540px;
   position: relative;
   overflow: hidden;
@@ -443,8 +451,8 @@ input[class^=btn-]:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #781d42;
-  color: white;
+  background-color: #373b44;
+  color: #fff;
   padding: 1rem;
   border-radius: 0 0 50%;
 }
@@ -465,7 +473,7 @@ input[class^=btn-]:hover {
   font-size: 10px;
 }
 #portfolio_cards .card .content {
-  background-color: #781d42;
+  background-color: #373b44;
   box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
@@ -509,7 +517,7 @@ input[class^=btn-]:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #000;
 }
 #intro .intro-stack .js .general {
   background: url("img/icons/code.svg") no-repeat center center;
@@ -592,7 +600,7 @@ input[class^=btn-]:hover {
   }
 }
 #portfolio {
-  color: #333;
+  color: #000;
 }
 #portfolio .portfolio_2 {
   display: flex;
@@ -601,7 +609,7 @@ input[class^=btn-]:hover {
   gap: 5rem;
 }
 #portfolio .portfolio_3 {
-  color: #333;
+  color: #000;
 }
 #portfolio .portfolio_3 .process {
   display: grid;
@@ -614,7 +622,7 @@ input[class^=btn-]:hover {
   top: 0;
   right: 0;
   font-size: 28px;
-  background: #781d42;
+  background: #373b44;
   color: #fff;
   border-radius: 50%;
   height: 15px;
@@ -627,7 +635,7 @@ input[class^=btn-]:hover {
 }
 #portfolio .portfolio_3 .process-icon {
   border-radius: 50%;
-  background: #333;
+  background: #000;
   color: #fff;
   padding: 2rem;
   width: 70px;
@@ -645,18 +653,20 @@ input[class^=btn-]:hover {
   transition: all 1s;
 }
 #portfolio .portfolio_3 .process-icon:hover {
-  background: #781d42;
+  background: #373b44;
 }
 #portfolio .portfolio_3 .process-icon:hover .process-step {
-  background: #333;
+  background: #000;
   color: #fff;
 }
 
 #contact {
-  margin: 30px 0;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 30px;
 }
 #contact .contact-form {
-  color: white;
+  color: #fff;
 }
 #contact .contact-form .text-fields {
   display: grid;
